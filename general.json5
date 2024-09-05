@@ -1,0 +1,50 @@
+{
+	"enabled": true,
+	"updateDelay": 2000,
+	"serverEntries": [
+		{
+			"maptype": "Dynmap",
+			"ip": "play.crationw.com",
+			"link": "http://map.crationw.com/"
+		},
+		{
+			"maptype": "Dynmap",
+			"ip": "mc.craftingtable.net",
+			"link": "http://map.craftingtable.net/#earth"
+		},
+		{
+			"maptype": "Dynmap",
+			"ip": "oyna.blokolik.com",
+			"link": "http://harita.blokolik.com:4004/"
+		},
+		{
+			"maptype": "Dynmap",
+			"ip": "play.crationw.com",
+			"link": "http://map.crationw.com/"
+		}
+	],
+	"defaultY": 64,
+	"minimapWaypointsRenderBelow": "WHEN_PLAYER_LIST_SHOWN",
+	"enablePlayerWaypoints": true,
+	"enablePlayerIcons": true,
+	"timeUntilAfk": 120,
+	"showAfkTimeInTabList": true,
+	"unknownAfkStateColor": 6316128,
+	"AfkColor": 16733440,
+	"playerWaypointColor": "Black",
+	"enableMarkerWaypoints": false,
+	"markerWaypointColor": "DarkBlue",
+	"ignoredServers": [
+		"play.poenasaga.com",
+		"5b5t.org",
+		"oyna.blokolik.com",
+		"oyna.crafthera.com"
+	],
+	"ignoreMarkerMessage": false,
+	"debugMode": false,
+	"minDistance": 0,
+	"maxDistance": 100000,
+	"maxIconDistance": 100000,
+	"minDistanceMarker": 0,
+	"maxDistanceMarker": 100000
+}
